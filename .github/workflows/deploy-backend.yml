@@ -29,7 +29,7 @@ jobs:
         
       - name: Upload JAR to S3
         run: |
-          JAR_FILE=$(Is build/libs/*.jar | grep -v plain)
+          JAR_FILE=$(ls build/libs/*.jar | grep -v plain)
           aws s3 cp "$JAR_FILE" s3://${{ secrets.BACKEND_BUCKET }}/app.jar
 
       - name: Deploy via SSM
