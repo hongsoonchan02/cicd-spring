@@ -94,7 +94,7 @@ public class NoticeController {
 		// 2. 로그인한 사용자가 아니라면 로그인 페이지로 이동
 		if (loginUser == null) {
 			return ResponseEntity.notFound().build();
-		}
+		}    
 		
 		// 3. 게시글 저장
 		boardService.write(request, loginUser.getId(), files);
