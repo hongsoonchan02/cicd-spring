@@ -99,7 +99,7 @@ public class NoticeController {
 		// 3. 게시글 저장
 		boardService.write(request, loginUser.getId(), files);
 		
-		// 4. 목록으로 이동
+		// 4. 목록으로 이동     
 		return ResponseEntity.ok("성공");
 	}            
 	
