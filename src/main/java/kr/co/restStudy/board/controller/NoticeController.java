@@ -95,7 +95,7 @@ public class NoticeController {
 		if (loginUser == null) {
 			return ResponseEntity.notFound().build();
 		}    
-		      
+		          
 		// 3. 게시글 저장
 		boardService.write(request, loginUser.getId(), files);
 		     
