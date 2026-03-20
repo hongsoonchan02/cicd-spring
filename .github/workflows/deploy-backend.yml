@@ -24,7 +24,7 @@ jobs:
 
       - name: Build JAR
         run: |
-          chmod +x gradlew
+          chmod +x gradlew     
           ./gradlew clean build -x test
         
       - name: Upload JAR to S3
